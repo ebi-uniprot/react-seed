@@ -9,7 +9,7 @@ module.exports = {
 	entry: __dirname + '/src/index.js',
 	output: {
 		path: __dirname + '/build',
-		filename: 'app.min.js'
+		filename: 'app.[hash].bundle.js'
 	},
 	module: {
 		rules: [
