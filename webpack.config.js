@@ -6,7 +6,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 module.exports = {
   context: __dirname,
   devtool: 'inline-sourcemap',
-  entry: __dirname + '/src/index.js',
+  entry: __dirname + '/src/index.jsx',
   output: {
     path: __dirname + '/build',
     filename: 'app.[hash].bundle.js'
@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader'
