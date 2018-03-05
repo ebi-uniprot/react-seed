@@ -9,7 +9,7 @@
     "dev-server": "webpack --mode development && webpack-dev-server --mode development --open",
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
-    "lint": "./node_modules/.bin/eslint src/index.js"
+    "lint": "./node_modules/.bin/eslint --env browser,node src/index.jsx"
   },
   "dependencies": {
     "path": "^0.12.7",
