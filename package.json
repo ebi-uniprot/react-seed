@@ -11,7 +11,8 @@
     "build": "webpack --mode production",
     "jslint": "./node_modules/.bin/eslint -c .eslintrc.json --ext .js --ext .jsx src/** __tests__/** __mocks__/**",
     "csslint": "scss-lint ./src/styles",
-    "test": "jest"
+    "test": "jest",
+    "update-snapshots": "jest --updateSnapshot"
   },
   "jest": {
     "moduleFileExtensions": [

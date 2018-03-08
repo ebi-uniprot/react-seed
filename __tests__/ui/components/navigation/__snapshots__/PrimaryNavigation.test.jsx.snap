@@ -3,15 +3,5 @@
 exports[`PrimaryNavigation component should render 1`] = `
 <div
   className="primary-navigation"
->
-  <button>
-    Home
-  </button>
-  <button>
-    Downloads
-  </button>
-  <button>
-    Contant
-  </button>
-</div>
+/>
 `;
