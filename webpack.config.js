@@ -6,7 +6,7 @@ const HtmlWebPackPlugin = require('html-webpack-plugin');
 module.exports = {
   context: __dirname,
   devtool: 'inline-sourcemap',
-  entry: __dirname + '/src/index.jsx',
+  entry: __dirname + '/src/ui/index.jsx',
   output: {
     path: __dirname + '/build',
     filename: 'app.[hash].bundle.js'

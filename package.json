@@ -1,7 +1,7 @@
 {
   "name": "react-seed",
   "version": "1.0.0",
-  "main": "./src/index.js",
+  "main": "./src/ui/index.jsx",
   "repository": "git@github.com:ebi-uniprot/react-seed.git",
   "author": "Mahdi Mahmoudy <mmahmoudy@ebi.ac.uk>",
   "license": "MIT",
@@ -10,7 +10,7 @@
     "dev": "webpack --mode development",
     "build": "webpack --mode production",
     "jslint": "./node_modules/.bin/eslint --env browser,node,jest --ext .js --ext .jsx src/** __tests__/** __mocks__/**",
-    "csslint": "scss-lint ./styles",
+    "csslint": "scss-lint ./src/styles",
     "test": "jest"
   },
   "jest": {
