@@ -11,6 +11,9 @@ module.exports = {
     path: __dirname + '/build',
     filename: 'app.[hash].bundle.js'
   },
+  resolve: {
+    extensions: [".jsx", ".js"]
+  },
   module: {
     rules: [
       {
