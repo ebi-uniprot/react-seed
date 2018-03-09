@@ -12,7 +12,8 @@
     "jslint": "./node_modules/.bin/eslint -c .eslintrc.json --ext .js --ext .jsx src/** __tests__/** __mocks__/**",
     "csslint": "scss-lint ./src/styles",
     "test": "jest",
-    "update-snapshots": "jest --updateSnapshot"
+    "update-snapshots": "jest --updateSnapshot",
+    "remove-obsolete-snapshots": "yarn test -u"
   },
   "jest": {
     "moduleFileExtensions": [

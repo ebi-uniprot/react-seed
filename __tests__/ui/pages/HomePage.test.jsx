@@ -1,13 +1,14 @@
 
 import React from 'react';
 import renderer from 'react-test-renderer';
+import { MemoryRouter } from 'react-router-dom';
 
-import DefaultPageContent from '../../../src/ui/layout/DefaultPageContent';
+import HomePage from '../../../src/ui/pages/HomePage';
 
-describe('DefaultPageContent component', () => {
+describe('HomePage component', () => {
   test('should render', () => {
     const component = renderer
-      .create(<DefaultPageContent>Works</DefaultPageContent>)
+      .create(<MemoryRouter><HomePage /></MemoryRouter>)
       .toJSON();
 
     expect(component).toMatchSnapshot();
