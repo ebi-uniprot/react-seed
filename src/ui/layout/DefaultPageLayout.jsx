@@ -7,7 +7,7 @@ import DefaultPageContent from './DefaultPageContent';
 const DefaultPageLayout = props => (
   <div className="default-page-layout">
 
-    You are viwing <b>{props.title}</b>
+    You are viewing <b>{props.title}</b>
     <br />
 
     <DefaultPageContent>
