@@ -2,6 +2,7 @@
 const webpack = require('webpack');
 const path = require('path');
 const HtmlWebPackPlugin = require('html-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 module.exports = {
   context: __dirname,
@@ -36,11 +37,21 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: __dirname + '/public/index.html',
       filename: 'index.html'
+    }),
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3100,
+      proxy: 'http://localhost:39093/',
+      open: false,
+      ui: false
+    }, {
+      reload: false
     })
   ],
   devServer: {
     contentBase: path.join(__dirname, 'build'),
     compress: true,
-    port: 8080
+    host: 'localhost',
+    port: 39093,
   }
 };
