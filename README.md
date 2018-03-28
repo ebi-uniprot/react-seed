@@ -50,3 +50,46 @@ After installing `bundler`, you can go to your project's directory -- where ther
 # Usage
 
 Run `yarn run dev-server` and go to [http://localhost:8080](http://localhost:8080) if it didn't open automatically.
+
+
+# Coding-styles & Linters
+
+Our preferred coding-style conventions are the [Airbnb's](http://airbnb.io/projects/styleguides/) [JavaScript](https://github.com/airbnb/javascript), [React](https://github.com/airbnb/javascript/tree/master/react) and [CSS+Sass](https://github.com/airbnb/css) style guides.
+
+You don't need to read or memorise all the styling rules; Write your code exactly the same way you always do, but when you are finished with editing a file or a even better, after modifying a few lines, go ahead and run the relevant linter in your terminal and the result of linter should be clear and self-explanatory enough for you to easily modify your changes to satisfy the linters.
+
+### Running JavaScript/React/JSX Linter
+
+Simply execute `yarn jslint`.
+
+### Running CSS/Sass Linter
+
+Just execute `yarn csslint`.
+
+
+
+# Running Unit Tests
+
+Currently all tests are written on top of Facebook's [Jest Framework](https://facebook.github.io/jest/). Running existing tests would be as easy as executing `yarn test` in the root directory of the project, in the command-line.
+
+# Writing Unit Tests
+
+
+As mentioned above, tests are written on top of [Jest](https://facebook.github.io/jest/). If you aren't familiar with either Jest or Unit Testing in general, the best place to start would be [Jest's Getting Started](https://facebook.github.io/jest/docs/en/getting-started.html) page.
+
+Once you have got yourself familiar with *Jest*, then start looking at the `__tests__` directory in the root of code-base. You should be able to find a few existing tests there which might be a good template for your first tests here.
+
+Before you start writing your tests, make sure they are in the write place:
+
+ - All tests should be placed in the `__tests__` directory, in the root of code-base.
+ - The `__tests__` directory mimics the exact structure of the `src` directory. The only exceptions are non-JavaScript files and folders e.g. `styles`. You would need to follow this carefully as they are not automatically enforced by linters.
+
+
+### Working with Jest Snapshots
+
+*Jest* has a rather unique feature called *Snapshot Testing*. If you are not familiar with that, have a look at [Jest's official documentation](https://facebook.github.io/jest/docs/en/snapshot-testing.html). You must be able to find a few examples of the snapshot testing in the `__tests__` directory as well.
+
+Here there are two points to keep in mind:
+
+ 1. *Jest* will automatically create a directory called `__snapshots__`, where ever it can find a snapshot test! All of your compiled snapshots will be stored in that directory and they need to be committed to the repository as well, as they are part of your tests.
+ 2. After updating a component which has snapshots tests already, you would need to run the following command to update your snapshots with the latest changes from your component: `yarn update-snapshots`. [Jest's documentation](https://facebook.github.io/jest/docs/en/snapshot-testing.html#updating-snapshots) has a section for updating, as well as resolving failing snapshot tests.
