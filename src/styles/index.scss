@@ -1,2 +1,6 @@
-
 @import "base/all";
+
+html {
+    font-family: $primary-font-family;
+    font-size: $base-font-size;
+}

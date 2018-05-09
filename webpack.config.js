@@ -50,8 +50,6 @@ module.exports = {
       proxy: 'http://localhost:39093/',
       open: false,
       ui: false
-    }, {
-      reload: false
     })
   ],
   devServer: {
